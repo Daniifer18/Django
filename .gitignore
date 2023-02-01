@@ -1,0 +1,3 @@
+# Ficheros basura y fichero de configuracion
+*.pyc
+*settings.py
