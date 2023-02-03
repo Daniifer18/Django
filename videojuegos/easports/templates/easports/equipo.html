@@ -1,0 +1,19 @@
+{% extends 'index.html'%}
+
+{% block title%}
+Detalle : {{equipo.nombre}}
+{% endblock %}
+
+{% block contenido %}
+<div>
+    <h1>{{ equipo.nombre }}</h1>
+    <p>{{ equipo.descripcion }}</p>
+    <ul>
+        {% for juegos in equipo.juego.all %}
+            <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3"><a href="{% url 'easports detalle_juego' juegos.nombre %}">{{juegos}}</a></button><br><br>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock contenido %}
+    
+
